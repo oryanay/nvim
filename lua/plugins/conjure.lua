@@ -27,5 +27,7 @@ return {
 	init = function()
 		-- Set configuration options here
 		-- vim.g["conjure#debug"] = true
+		vim.g["conjure#mapping#doc_word"] = "K"
+		vim.g["conjure#mapping#def_word"] = "gd"
 	end,
 }

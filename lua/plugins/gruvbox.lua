@@ -1,8 +1,7 @@
 return {
-	"ellisonleao/gruvbox.nvim", 
-	priority = 1000 , 
-	lazy = false,
-	config = function() 
+	"ellisonleao/gruvbox.nvim",
+	priority = 1000,
+	config = function()
 		vim.cmd("colorscheme gruvbox")
-	end
+	end,
 }

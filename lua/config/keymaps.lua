@@ -33,3 +33,6 @@ keymap.set("v", "<leader>d", '"_d')
 
 -- lazy
 keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
+-- new file
+keymap.set("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })

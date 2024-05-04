@@ -1,7 +1,7 @@
 -- Set <space> as the leader key
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 -- Set <comma> as the local leader key
-vim.g.maplocalleader = ','
+vim.g.maplocalleader = ","
 
 vim.g.have_nerd_font = true
 
@@ -10,7 +10,7 @@ local opt = vim.opt
 -- Make line numbers default
 opt.number = true
 opt.relativenumber = true
-opt.colorcolumn = '100'
+opt.colorcolumn = "100"
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
@@ -37,15 +37,14 @@ opt.errorbells = false
 opt.swapfile = false
 opt.backup = false
 opt.undofile = true -- Save undo history
-opt.undodir = vim.fn.expand("~/.vim/undodir")
+-- opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.undofile = true
 opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
 opt.autochdir = false
 opt.iskeyword:append("-")
-opt.mouse:append('a')  -- Enable mouse mode
+opt.mouse:append("a") -- Enable mouse mode
 opt.clipboard:append("unnamedplus") -- Sync clipboard between OS and Neovim.
 opt.modifiable = true
 opt.encoding = "UTF-8"
-
