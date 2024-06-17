@@ -71,7 +71,7 @@ return {
 		local servers = {
 			clojure_lsp = {},
 			tsserver = {},
-			volar = { filetypes = { vue } },
+			volar = { filetypes = { "vue" } },
 			lua_ls = {
 				settings = { lua = { completion = { callSnipper = "Replace" } } },
 			},
