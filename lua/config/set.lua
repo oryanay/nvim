@@ -48,3 +48,7 @@ opt.mouse:append("a") -- Enable mouse mode
 -- opt.clipboard:append("unnamedplus") -- Sync clipboard between OS and Neovim.
 opt.modifiable = true
 opt.encoding = "UTF-8"
+
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
+vim.opt.timeoutlen = 300

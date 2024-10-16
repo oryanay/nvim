@@ -1,38 +1,53 @@
 return {
 	"folke/which-key.nvim",
-	lazy = true,
-	event = "VimEnter", -- Sets the loading event to VimEnter
-	config = function()
-		vim.o.timeout = true
-		vim.o.timeoutlen = 300
-		require("which-key").setup()
-
-		-- Document existing key chains
-		require("which-key").register({
-			{ "", group = "[D]ocument" },
-			{ "", group = "[R]ename" },
-			{ "", group = "[S]earch" },
-			{ "", group = "[B]uffer" },
-			{ "", group = "[W]orkspace" },
-			{ "", group = "[C]ode" },
-			{ "", desc = "", hidden = true, mode = { "n", "n", "n", "n", "n", "n" } },
-			-- { "", desc = "<leader>r_", hidden = true },
-			-- { "", group = "[C]ode" },
-			-- { "", desc = "<leader>b_", hidden = true },
-			-- { "", desc = "<leader>c_", hidden = true },
-			-- { "", group = "[D]ocument" },
-			-- { "", desc = "<leader>d_", hidden = true },
-			-- { "", group = "[B]uffer" },
-			-- { "", group = "[W]orkspace" },
-			-- { "", desc = "<leader>w_", hidden = true },
-			-- { "", group = "[S]earch" },
-			-- { "", desc = "<leader>s_", hidden = true },
-			-- { "", group = "[R]ename" },
-		})
-	end,
+	event = "VimEnter",
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
+		mappings = vim.g.have_nerd_font,
+		icons = {
+			-- set icon mappings to true if you have a Nerd Font
+			mappings = vim.g.have_nerd_font,
+			-- If you are using a Nerd Font: set icons.keys to an empty table which will use the
+			-- default whick-key.nvim defined Nerd Font icons, otherwise define a string table
+			keys = vim.g.have_nerd_font and {} or {
+				Up = "<Up> ",
+				Down = "<Down> ",
+				Left = "<Left> ",
+				Right = "<Right> ",
+				C = "<C-…> ",
+				M = "<M-…> ",
+				D = "<D-…> ",
+				S = "<S-…> ",
+				CR = "<CR> ",
+				Esc = "<Esc> ",
+				ScrollWheelDown = "<ScrollWheelDown> ",
+				ScrollWheelUp = "<ScrollWheelUp> ",
+				NL = "<NL> ",
+				BS = "<BS> ",
+				Space = "<Space> ",
+				Tab = "<Tab> ",
+				F1 = "<F1>",
+				F2 = "<F2>",
+				F3 = "<F3>",
+				F4 = "<F4>",
+				F5 = "<F5>",
+				F6 = "<F6>",
+				F7 = "<F7>",
+				F8 = "<F8>",
+				F9 = "<F9>",
+				F10 = "<F10>",
+				F11 = "<F11>",
+				F12 = "<F12>",
+			},
+		},
+
+		spec = {
+			{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
+			{ "<leader>d", group = "[D]ocument" },
+			{ "<leader>r", group = "[R]ename" },
+			{ "<leader>s", group = "[S]earch" },
+			{ "<leader>w", group = "[W]orkspace" },
+			{ "<leader>t", group = "[T]oggle" },
+			{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
+		},
 	},
 }
