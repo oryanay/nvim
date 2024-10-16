@@ -45,6 +45,6 @@ opt.splitbelow = true
 opt.autochdir = false
 opt.iskeyword:append("-")
 opt.mouse:append("a") -- Enable mouse mode
-opt.clipboard:append("unnamedplus") -- Sync clipboard between OS and Neovim.
+-- opt.clipboard:append("unnamedplus") -- Sync clipboard between OS and Neovim.
 opt.modifiable = true
 opt.encoding = "UTF-8"
