@@ -3,6 +3,12 @@ local opts = { noremap = true, silent = true }
 -- Directory Navigation
 -- keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
+-- Clear highlights on search when pressing <Esc> in normal mode
+keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Diagnostic keymaps
+keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+
 -- Pane navigation
 keymap.set("n", "<C-h>", "<C-w>h", opts)
 keymap.set("n", "<C-j>", "<C-w>j", opts)
