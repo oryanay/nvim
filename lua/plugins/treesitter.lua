@@ -9,6 +9,7 @@ return {
 				"bash",
 				"html",
 				"c",
+				"python",
 				"lua",
 				"luadoc",
 				"query",
