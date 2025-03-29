@@ -10,7 +10,7 @@ return {
 				clojure = { "clj-kondo" },
 				text = { "vale" },
 				json = { "jsonlint" },
-				python = { "pylint" },
+				python = { "ruff" },
 			}
 
 			-- Create autocommand which carries out the actual linting
