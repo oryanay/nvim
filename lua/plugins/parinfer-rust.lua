@@ -1,1 +1,1 @@
-return { "eraserhd/parinfer-rust", build = "cargo build --release" }
+return { "eraserhd/parinfer-rust", build = "cargo build --release", lazy = true }

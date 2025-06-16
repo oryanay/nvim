@@ -25,6 +25,12 @@ return {
 				"json",
 				"jsonc",
 				"tsx",
+				"css",
+				"norg",
+				"scss",
+				"svelte",
+				"typst",
+				"vue",
 			},
 			auto_install = true,
 			highlight = {
