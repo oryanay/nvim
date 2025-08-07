@@ -48,6 +48,11 @@ opt.mouse:append("a") -- Enable mouse mode
 -- opt.clipboard:append("unnamedplus") -- Sync clipboard between OS and Neovim.
 opt.modifiable = true
 opt.encoding = "UTF-8"
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+opt.foldenable = true
+opt.foldlevel = 99
+opt.foldlevelstart = 99
 
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner

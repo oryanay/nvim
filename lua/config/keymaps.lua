@@ -52,3 +52,7 @@ keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" 
 keymap.set("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 -- keymap("n", "<leader>bd", LazyVim.ui.bufremove, { desc = "Delete Buffer" })
 keymap.set("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
+
+-- Copy filename/path to clipboard
+keymap.set("n", "<leader>cf", ':let @+ = expand("%")<CR>', { desc = "Copy filename" })
+keymap.set("n", "<leader>cp", ':let @+ = expand("%:p")<CR>', { desc = "Copy full path" })

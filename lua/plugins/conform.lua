@@ -14,6 +14,11 @@ return {
 	},
 	opts = {
 		notify_on_error = false,
+		formatters = {
+			goimports = {
+				prepend_args = { "-local", "b1/,github.com/Zemanta/" },
+			},
+		},
 		format_on_save = function(bufnr)
 			-- Disable "format_on_save lsp_fallback" for languages that don't
 			-- have a well standardized coding style. You can add additional
@@ -27,6 +32,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "isort", "black" },
+			go = { "gofumpt", "goimports" },
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			vue = { "prettier" },
 			["javascriptreact"] = { "prettier" },
