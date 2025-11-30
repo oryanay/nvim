@@ -154,6 +154,8 @@ return {
 			"gofumpt", -- Go formatter
 			"goimports", -- Go imports formatter
 			"golangci-lint", -- Go linter
+			"black", -- Python formatter
+			"isort", -- Python import sorter
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

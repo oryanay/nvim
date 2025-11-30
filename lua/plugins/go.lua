@@ -13,7 +13,7 @@ return {
 				goimports = "gopls", -- goimports command, can be gopls[default] or either goimports or golines if need to split long lines
 				fillstruct = "gopls", -- default, can also use fillstruct
 				gofmt = "gofumpt", -- gofmt cmd,
-				max_line_len = 128, -- max line length in golines format, Target maximum line length for golines
+				-- max_line_len removed: only effective when gofmt is "go", but we use "gofumpt"
 				tag_transform = false, -- can be transform option("snakecase", "camelcase", etc) check gomodifytags for details and more options
 				tag_options = "json=omitempty", -- sets options sent to gomodifytags, i.e., json=omitempty
 				gotests_template = "", -- sets gotests -template parameter (check gotests for details)
@@ -99,7 +99,7 @@ return {
 			-- 	group = format_sync_grp,
 			-- })
 		end,
-		event = { "CmdlineEnter" },
+		-- Load only for Go files, not on command line entry (which was causing warnings on all files)
 		ft = { "go", "gomod" },
 		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
 	},
