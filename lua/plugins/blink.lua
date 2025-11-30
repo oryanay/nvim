@@ -1,14 +1,18 @@
 return {
+	-- Load blink.compat early to set up compatibility shim before after/plugin files run
+	{
+		"saghen/blink.compat",
+		-- Load on VeryLazy to ensure compatibility shim is available early in startup
+		event = "VeryLazy",
+		opts = {},
+		version = not vim.g.lazyvim_blink_main and "*",
+	},
+
 	"saghen/blink.cmp",
 	-- optional: provides snippets for the snippet source
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		{
-			"saghen/blink.compat",
-			optional = true, -- make optional so it's only enabled if any extras need it
-			opts = {},
-			version = not vim.g.lazyvim_blink_main and "*",
-		},
+		-- blink.compat is loaded separately above to ensure early initialization
 	},
 
 	-- use a release tag to download pre-built binaries
@@ -50,6 +54,10 @@ return {
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
+			-- Add conjure source for Clojure/Fennel/Python files (via blink.compat)
+			clojure = { "lsp", "path", "snippets", "buffer", "conjure" },
+			fennel = { "lsp", "path", "snippets", "buffer", "conjure" },
+			python = { "lsp", "path", "snippets", "buffer", "conjure" },
 		},
 
 		-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance

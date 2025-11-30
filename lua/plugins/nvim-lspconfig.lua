@@ -111,7 +111,19 @@ return {
 					},
 				},
 			},
-			-- pyright = {},
+			pyright = {
+				settings = {
+					python = {
+						analysis = {
+							typeCheckingMode = "basic", -- "off", "basic", "standard", or "strict"
+							autoImportCompletions = true,
+							autoSearchPaths = true,
+							diagnosticMode = "workspace", -- "openFilesOnly" or "workspace"
+							useLibraryCodeForTypes = true,
+						},
+					},
+				},
+			},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			ts_ls = {},
